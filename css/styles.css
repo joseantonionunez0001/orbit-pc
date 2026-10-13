@@ -1,36 +1,4 @@
-/* ==========================================================================
-   ORBIT PC — Hoja de estilos principal
-   --------------------------------------------------------------------------
-   1. Variables (tokens de diseño)
-   2. Reset y estilos base
-   3. Utilidades y layout
-   4. Componentes
-      4.1 Cabecera y navegación
-      4.2 Botones, etiquetas y enlaces
-      4.3 Secciones y cabeceras de página
-      4.4 Tarjeta de producto
-      4.5 Tarjeta de ventaja / soporte
-      4.6 Banda de llamada a la acción
-      4.7 Chips y etiquetas
-      4.8 Datos clave
-      4.9 Tarjeta de información (perfil de uso, contenido de la caja)
-   5. Páginas
-      5.1 Inicio (hero)
-      5.2 Tienda (comparador)
-      5.3 Detalle de producto (configuración y ficha técnica)
-      5.4 Soporte (preguntas frecuentes)
-      5.5 Contacto (formulario)
-   6. Pie de página
-   7. Responsive
-   ========================================================================== */
-
-
-/* ==========================================================================
-   1. Variables
-   ========================================================================== */
-
 :root {
-  /* Colores: misma paleta del prototipo de Figma */
   --color-bg: #0a1120;
   --color-surface: #131c2e;
   --color-surface-2: #1a2438;
@@ -45,7 +13,6 @@
   --color-on-accent: #0a1120;
   --color-error: #ff8a94;
 
-  /* Tipografía */
   --font-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
@@ -55,7 +22,6 @@
   --fs-2xl: clamp(2rem, 1.3rem + 3vw, 3.25rem);
   --fs-hero: clamp(2.5rem, 1.2rem + 4.4vw, 5.25rem);
 
-  /* Espaciado */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -63,7 +29,6 @@
   --space-xl: 4rem;
   --space-2xl: 6rem;
 
-  /* Formas y efectos */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 18px;
@@ -72,15 +37,9 @@
   --glow-accent: 0 0 0 1px var(--color-accent), 0 18px 48px -18px rgba(116, 227, 199, 0.45);
   --transition: 180ms ease;
 
-  /* Layout */
   --container: 1200px;
   --header-height: 88px;
 }
-
-
-/* ==========================================================================
-   2. Reset y estilos base
-   ========================================================================== */
 
 *,
 *::before,
@@ -106,7 +65,6 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
-  /* Rejilla vertical sutil y halo verde, como en el prototipo */
   background-image:
     radial-gradient(ellipse 55% 45% at 72% 28%, rgba(116, 227, 199, 0.08), transparent 70%),
     linear-gradient(90deg, rgba(148, 160, 180, 0.045) 1px, transparent 1px);
@@ -163,11 +121,6 @@ button {
   color: var(--color-on-accent);
 }
 
-
-/* ==========================================================================
-   3. Utilidades y layout
-   ========================================================================== */
-
 .container {
   width: min(100% - 2.5rem, var(--container));
   margin-inline: auto;
@@ -205,13 +158,6 @@ button {
 .text-accent {
   color: var(--color-accent);
 }
-
-
-/* ==========================================================================
-   4. Componentes
-   ========================================================================== */
-
-/* 4.1 Cabecera y navegación ------------------------------------------------ */
 
 .site-header {
   position: sticky;
@@ -299,9 +245,6 @@ button {
   transform: scaleX(1);
 }
 
-
-/* 4.2 Botones, etiquetas y enlaces ---------------------------------------- */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -387,9 +330,6 @@ button {
   gap: 0.7rem;
 }
 
-
-/* 4.3 Secciones y cabeceras de página ------------------------------------- */
-
 .section {
   padding-block: var(--space-xl);
 }
@@ -427,9 +367,6 @@ button {
   max-width: 620px;
   color: var(--color-text-muted);
 }
-
-
-/* 4.4 Tarjeta de producto ------------------------------------------------- */
 
 .product-grid {
   display: flex;
@@ -485,7 +422,6 @@ button {
   font-weight: 700;
 }
 
-/* Enlace estirado: toda la tarjeta es clicable sin anidar enlaces */
 .product-card__link {
   text-decoration: none;
 }
@@ -531,9 +467,6 @@ button {
   text-transform: uppercase;
   color: var(--color-text-subtle);
 }
-
-
-/* 4.5 Tarjeta de ventaja / soporte ---------------------------------------- */
 
 .feature-list {
   display: flex;
@@ -584,9 +517,6 @@ button {
   padding-top: 0.4rem;
 }
 
-
-/* 4.6 Banda de llamada a la acción ---------------------------------------- */
-
 .cta-band {
   display: flex;
   align-items: center;
@@ -616,9 +546,6 @@ button {
   color: var(--color-text-muted);
 }
 
-
-/* 4.7 Chips y etiquetas --------------------------------------------------- */
-
 .chip {
   display: inline-flex;
   align-items: center;
@@ -646,11 +573,6 @@ button {
   color: var(--color-accent);
 }
 
-
-/* 4.8 Datos clave --------------------------------------------------------- */
-
-/* El gap de 1px deja ver el fondo y dibuja las líneas divisorias,
-   también cuando los elementos pasan a otra fila */
 .highlights {
   display: flex;
   flex-wrap: wrap;
@@ -683,9 +605,6 @@ button {
   font-size: var(--fs-sm);
   color: var(--color-text-muted);
 }
-
-
-/* 4.9 Tarjeta de información ---------------------------------------------- */
 
 .info-pair {
   display: flex;
@@ -777,13 +696,6 @@ button {
   font-weight: 800;
   color: var(--color-accent);
 }
-
-
-/* ==========================================================================
-   5. Páginas
-   ========================================================================== */
-
-/* 5.1 Inicio (hero) ------------------------------------------------------- */
 
 .hero__inner {
   display: flex;
@@ -905,9 +817,6 @@ button {
   font-size: var(--fs-sm);
 }
 
-
-/* 5.2 Tienda (comparador) ------------------------------------------------- */
-
 .table-wrap {
   overflow-x: auto;
   border: 1px solid var(--color-border);
@@ -958,9 +867,6 @@ button {
   font-weight: 800;
   color: var(--color-accent);
 }
-
-
-/* 5.3 Detalle de producto ------------------------------------------------- */
 
 .product {
   padding-block: var(--space-lg) var(--space-xl);
@@ -1023,7 +929,6 @@ button {
   color: var(--color-text-muted);
 }
 
-/* Especificaciones: el valor se muestra encima de su etiqueta */
 .specs {
   display: flex;
   flex-wrap: wrap;
@@ -1085,7 +990,6 @@ button {
   color: var(--color-accent);
 }
 
-/* Selector de configuración */
 .config {
   margin: var(--space-xs) 0 0;
   padding: 0;
@@ -1156,9 +1060,6 @@ button {
   color: var(--color-text-muted);
 }
 
-/* Cada dato que depende de la configuración tiene dos versiones
-   (.config-base y .config-plus). Con :has() se muestra la que
-   corresponde a la opción marcada, sin necesidad de JavaScript. */
 .config-plus {
   display: none;
 }
@@ -1171,7 +1072,6 @@ button {
   display: inline;
 }
 
-/* Ficha técnica */
 .tech-specs {
   display: flex;
   flex-wrap: wrap;
@@ -1228,9 +1128,6 @@ button {
   text-align: right;
 }
 
-
-/* 5.4 Soporte (preguntas frecuentes) -------------------------------------- */
-
 .faq {
   display: flex;
   flex-direction: column;
@@ -1281,9 +1178,6 @@ button {
   padding: 0 1.4rem 1.2rem;
   color: var(--color-text-muted);
 }
-
-
-/* 5.5 Contacto (formulario) ----------------------------------------------- */
 
 .contact {
   display: flex;
@@ -1431,7 +1325,6 @@ textarea.form-control {
   resize: vertical;
 }
 
-/* Opciones tipo "chip" para los radio buttons */
 .choice-list {
   display: flex;
   flex-wrap: wrap;
@@ -1502,7 +1395,6 @@ textarea.form-control {
   gap: var(--space-sm);
 }
 
-/* Página de confirmación (gracias.html) */
 .thanks {
   display: flex;
   flex-direction: column;
@@ -1536,11 +1428,6 @@ textarea.form-control {
 .thanks .form-actions {
   justify-content: center;
 }
-
-
-/* ==========================================================================
-   6. Pie de página
-   ========================================================================== */
 
 .site-footer {
   margin-top: var(--space-xl);
@@ -1582,11 +1469,6 @@ textarea.form-control {
   text-transform: uppercase;
   color: var(--color-text-subtle);
 }
-
-
-/* ==========================================================================
-   7. Responsive
-   ========================================================================== */
 
 @media (max-width: 960px) {
   .hero__inner {

@@ -22,7 +22,6 @@
 
   <ellipse cx="280" cy="340" rx="250" ry="14" fill="url(#shadow)"/>
 
-  <!-- Pantalla -->
   <rect x="78" y="12" width="404" height="272" rx="14" fill="#182131" stroke="#8e9bb1" stroke-width="3"/>
   <circle cx="280" cy="22" r="3" fill="#cfd6e2"/>
   <rect x="94" y="32" width="372" height="236" rx="3" fill="url(#screen)"/>
@@ -33,7 +32,6 @@
     <path d="M168 268 C270 202 380 172 466 178" fill="none" stroke="#cff7ec" stroke-width="1.5" opacity="0.55"/>
   </g>
 
-  <!-- Base y teclado -->
   <path d="M74 286 H486 L534 316 Q542 326 528 326 H32 Q18 326 26 316 Z" fill="url(#deck)" stroke="#8e9bb1" stroke-width="3" stroke-linejoin="round"/>
   <rect x="98" y="293" width="364" height="8" fill="url(#keys)"/>
   <rect x="84" y="305" width="392" height="8" fill="url(#keys)"/>

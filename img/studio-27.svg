@@ -20,11 +20,9 @@
 
   <ellipse cx="280" cy="356" rx="230" ry="14" fill="url(#shadow)"/>
 
-  <!-- Pie -->
   <path d="M262 296 H298 L306 340 H254 Z" fill="url(#neck)"/>
   <rect x="196" y="336" width="168" height="10" rx="5" fill="#8e9bb1"/>
 
-  <!-- Monitor -->
   <rect x="30" y="12" width="500" height="286" rx="12" fill="#182131" stroke="#8e9bb1" stroke-width="3"/>
   <rect x="46" y="28" width="468" height="244" rx="3" fill="url(#screen)"/>
   <g clip-path="url(#screen-clip)">
