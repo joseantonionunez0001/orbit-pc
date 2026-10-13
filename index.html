@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBIT PC · Tecnología para tu mundo</title>
+  <meta name="description" content="ORBIT PC: portátiles, sobremesas y todo en uno para crear, jugar y trabajar sin límites.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <span class="logo__name">ORBIT<span class="logo__accent">PC</span></span>
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html" aria-current="page">Inicio</a></li>
+          <li><a class="main-nav__link" href="tienda.html">Tienda</a></li>
+          <li><a class="main-nav__link" href="soporte.html">Soporte</a></li>
+          <li><a class="main-nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge">Nueva colección</span>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__title-line">Tu próximo</span>
+            <span class="hero__title-line hero__title-accent">gran salto</span>
+          </h1>
+          <p class="hero__lead">Ordenadores para crear, jugar y trabajar sin límites. Encuentra el equipo que encaja contigo.</p>
+          <a class="btn btn--primary btn--lg" href="tienda.html">Explorar tienda</a>
+          <div class="hero__meta">
+            <p class="eyebrow">03 equipos destacados</p>
+            <p>Portátiles · Sobremesa · Todo en uno</p>
+          </div>
+        </div>
+
+        <figure class="hero__visual">
+          <img src="img/aura-14.svg" width="560" height="360" alt="Portátil AURA 14 de ORBIT PC con la pantalla encendida">
+          <span class="hero__chip hero__chip--top">Pantalla 2.8K a 120 Hz</span>
+          <span class="hero__chip hero__chip--side">Hasta 14 h de batería</span>
+          <figcaption class="hero__caption">
+            <strong>Pure power</strong>
+            <span>Potencia en movimiento</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Equipos destacados -->
+    <section class="section" aria-labelledby="destacados-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Colección 2026</p>
+          <h2 class="section__title" id="destacados-title">Equipos destacados</h2>
+          <p class="section__lead">Tres ordenadores pensados para tres formas distintas de trabajar. Elige el tuyo y descubre todos sus detalles.</p>
+        </header>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-card__media">
+              <img src="img/aura-14.svg" width="560" height="360" alt="" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <p class="eyebrow">Portátil</p>
+              <h3 class="product-card__title"><a class="product-card__link" href="aura-14.html">AURA 14</a></h3>
+              <p class="product-card__text">Ligero para moverte</p>
+              <ul class="product-card__specs">
+                <li class="chip">14″ 2.8K</li>
+                <li class="chip">16 GB</li>
+                <li class="chip">512 GB SSD</li>
+                <li class="chip">1,35 kg</li>
+              </ul>
+              <div class="product-card__footer">
+                <p class="product-card__price"><span class="product-card__from">Desde</span>1.199 €</p>
+                <span class="link-arrow" aria-hidden="true">Ver detalles →</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img src="img/nexus-x.svg" width="320" height="360" alt="" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <p class="eyebrow">Sobremesa</p>
+              <h3 class="product-card__title"><a class="product-card__link" href="nexus-x.html">NEXUS X</a></h3>
+              <p class="product-card__text">Rendimiento ampliable</p>
+              <ul class="product-card__specs">
+                <li class="chip">8 núcleos</li>
+                <li class="chip">32 GB</li>
+                <li class="chip">1 TB SSD</li>
+                <li class="chip">Gráfica 12 GB</li>
+              </ul>
+              <div class="product-card__footer">
+                <p class="product-card__price"><span class="product-card__from">Desde</span>1.499 €</p>
+                <span class="link-arrow" aria-hidden="true">Ver detalles →</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__media">
+              <img src="img/studio-27.svg" width="560" height="380" alt="" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <p class="eyebrow">Todo en uno</p>
+              <h3 class="product-card__title"><a class="product-card__link" href="studio-27.html">STUDIO 27</a></h3>
+              <p class="product-card__text">Todo en su sitio</p>
+              <ul class="product-card__specs">
+                <li class="chip">27″ 4K</li>
+                <li class="chip">16 GB</li>
+                <li class="chip">1 TB SSD</li>
+                <li class="chip">Teclado y ratón</li>
+              </ul>
+              <div class="product-card__footer">
+                <p class="product-card__price"><span class="product-card__from">Desde</span>1.349 €</p>
+                <span class="link-arrow" aria-hidden="true">Ver detalles →</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elegir según el uso -->
+    <section class="section" aria-labelledby="uso-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Te ayudamos a elegir</p>
+          <h2 class="section__title" id="uso-title">¿Para qué lo vas a usar?</h2>
+          <p class="section__lead">Cada equipo está pensado para una forma de trabajar. Empieza por lo que necesitas y te llevamos al ordenador adecuado.</p>
+        </header>
+
+        <ul class="feature-list">
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2Z"/><path d="M4 19.5A2 2 0 0 0 6 21h14"/></svg>
+            </span>
+            <h3 class="feature__title">Estudiar y moverte</h3>
+            <p class="feature__text">Ligero, silencioso y con batería para todo el día de clase o de trabajo fuera de casa.</p>
+            <a class="link-arrow" href="aura-14.html">Ver AURA 14 →</a>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/></svg>
+            </span>
+            <h3 class="feature__title">Jugar y crear contenido</h3>
+            <p class="feature__text">Gráfica dedicada de 12 GB y potencia de sobra para jugar, editar vídeo o hacer streaming.</p>
+            <a class="link-arrow" href="nexus-x.html">Ver NEXUS X →</a>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/></svg>
+            </span>
+            <h3 class="feature__title">Diseñar y teletrabajar</h3>
+            <p class="feature__text">Pantalla 4K de 27 pulgadas con color fiel y un escritorio sin cables a la vista.</p>
+            <a class="link-arrow" href="studio-27.html">Ver STUDIO 27 →</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Ventajas -->
+    <section class="section" aria-labelledby="ventajas-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Por qué ORBIT PC</p>
+          <h2 class="section__title" id="ventajas-title">Compra sin preocupaciones</h2>
+        </header>
+
+        <ul class="feature-list">
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+            </span>
+            <h3 class="feature__title">Envío en 24/48 h</h3>
+            <p class="feature__text">Gratis en península y con seguimiento desde que sale de nuestro almacén.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3 class="feature__title">3 años de garantía</h3>
+            <p class="feature__text">Todos los equipos incluyen tres años de garantía oficial sin coste adicional.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>
+            </span>
+            <h3 class="feature__title">Soporte experto</h3>
+            <p class="feature__text">Un equipo técnico te ayuda a configurar y sacar partido a tu ordenador.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg>
+            </span>
+            <h3 class="feature__title">30 días de devolución</h3>
+            <p class="feature__text">Si no es lo que esperabas, lo recogemos en casa y te devolvemos el dinero.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Llamada a la acción -->
+    <section class="section" aria-label="Ayuda para elegir equipo">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-band__text">
+            <h2 class="cta-band__title">¿No sabes cuál elegir?</h2>
+            <p class="cta-band__lead">Cuéntanos qué necesitas y te recomendamos el equipo ideal.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="contacto.html">Hablar con un experto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <span class="logo__name">ORBIT<span class="logo__accent">PC</span></span>
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="site-footer__links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="aura-14.html">AURA 14</a></li>
+          <li><a href="nexus-x.html">NEXUS X</a></li>
+          <li><a href="studio-27.html">STUDIO 27</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 ORBIT PC · Equipo conceptual · Práctica de Diseño de Interfaces</p>
+    </div>
+  </footer>
+</body>
+</html>

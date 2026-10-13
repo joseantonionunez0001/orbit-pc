@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360">
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6a69"/>
+      <stop offset="1" stop-color="#1b3557"/>
+    </linearGradient>
+    <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f3b50"/>
+      <stop offset="1" stop-color="#1b2433"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#000" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="keys" x="96" y="0" width="28" height="12" patternUnits="userSpaceOnUse">
+      <rect width="22" height="7" rx="1.5" fill="#4b5a72"/>
+    </pattern>
+    <clipPath id="screen-clip">
+      <rect x="94" y="32" width="372" height="236" rx="3"/>
+    </clipPath>
+  </defs>
+
+  <ellipse cx="280" cy="340" rx="250" ry="14" fill="url(#shadow)"/>
+
+  <!-- Pantalla -->
+  <rect x="78" y="12" width="404" height="272" rx="14" fill="#182131" stroke="#8e9bb1" stroke-width="3"/>
+  <circle cx="280" cy="22" r="3" fill="#cfd6e2"/>
+  <rect x="94" y="32" width="372" height="236" rx="3" fill="url(#screen)"/>
+  <g clip-path="url(#screen-clip)">
+    <path d="M94 268 C190 200 300 122 466 70 V268 Z" fill="#2e9c8e" opacity="0.28"/>
+    <path d="M94 32 H466 V40 C330 44 200 70 94 130 Z" fill="#ffffff" opacity="0.03"/>
+    <path d="M112 262 C210 200 330 122 466 78" fill="none" stroke="#74e3c7" stroke-width="4" stroke-linecap="round"/>
+    <path d="M168 268 C270 202 380 172 466 178" fill="none" stroke="#cff7ec" stroke-width="1.5" opacity="0.55"/>
+  </g>
+
+  <!-- Base y teclado -->
+  <path d="M74 286 H486 L534 316 Q542 326 528 326 H32 Q18 326 26 316 Z" fill="url(#deck)" stroke="#8e9bb1" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="98" y="293" width="364" height="8" fill="url(#keys)"/>
+  <rect x="84" y="305" width="392" height="8" fill="url(#keys)"/>
+  <rect x="236" y="318" width="88" height="4" rx="2" fill="#121a28"/>
+</svg>

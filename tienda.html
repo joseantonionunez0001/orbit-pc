@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda · ORBIT PC</title>
+  <meta name="description" content="Encuentra tu equipo: portátil AURA 14, sobremesa NEXUS X y todo en uno STUDIO 27.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <span class="logo__name">ORBIT<span class="logo__accent">PC</span></span>
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="main-nav__link" href="tienda.html" aria-current="page">Tienda</a></li>
+          <li><a class="main-nav__link" href="soporte.html">Soporte</a></li>
+          <li><a class="main-nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="container page-intro">
+      <h1 class="page-intro__title">Encuentra tu equipo</h1>
+      <p class="page-intro__lead">Tres opciones para necesidades diferentes. Selecciona un equipo y descubre sus detalles.</p>
+    </header>
+
+    <!-- Listado de productos -->
+    <section class="container" aria-label="Listado de productos">
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-card__media">
+            <img src="img/aura-14.svg" width="560" height="360" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Portátil</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="aura-14.html">AURA 14</a></h2>
+            <p class="product-card__text">Ligero para moverte</p>
+            <ul class="product-card__specs">
+              <li class="chip">14″ 2.8K</li>
+              <li class="chip">16 GB</li>
+              <li class="chip">512 GB SSD</li>
+              <li class="chip">1,35 kg</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.199 €</p>
+              <span class="link-arrow" aria-hidden="true">Ver detalles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__media">
+            <img src="img/nexus-x.svg" width="320" height="360" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Sobremesa</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="nexus-x.html">NEXUS X</a></h2>
+            <p class="product-card__text">Rendimiento ampliable</p>
+            <ul class="product-card__specs">
+              <li class="chip">8 núcleos</li>
+              <li class="chip">32 GB</li>
+              <li class="chip">1 TB SSD</li>
+              <li class="chip">Gráfica 12 GB</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.499 €</p>
+              <span class="link-arrow" aria-hidden="true">Ver detalles →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__media">
+            <img src="img/studio-27.svg" width="560" height="380" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Todo en uno</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="studio-27.html">STUDIO 27</a></h2>
+            <p class="product-card__text">Todo en su sitio</p>
+            <ul class="product-card__specs">
+              <li class="chip">27″ 4K</li>
+              <li class="chip">16 GB</li>
+              <li class="chip">1 TB SSD</li>
+              <li class="chip">Teclado y ratón</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.349 €</p>
+              <span class="link-arrow" aria-hidden="true">Ver detalles →</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Comparador -->
+    <section class="section" aria-labelledby="comparador-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Comparador</p>
+          <h2 class="section__title" id="comparador-title">Compara antes de decidir</h2>
+          <p class="section__lead">Las características principales de los tres equipos, una al lado de la otra.</p>
+        </header>
+
+        <div class="table-wrap">
+          <table class="compare-table">
+            <caption class="sr-only">Comparativa de los equipos AURA 14, NEXUS X y STUDIO 27</caption>
+            <thead>
+              <tr>
+                <th scope="col">Característica</th>
+                <th scope="col">AURA 14</th>
+                <th scope="col">NEXUS X</th>
+                <th scope="col">STUDIO 27</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Tipo</th>
+                <td>Portátil</td>
+                <td>Sobremesa</td>
+                <td>Todo en uno</td>
+              </tr>
+              <tr>
+                <th scope="row">Procesador</th>
+                <td>8 núcleos, hasta 4,6 GHz</td>
+                <td>8 núcleos / 16 hilos, hasta 5,2 GHz</td>
+                <td>10 núcleos, hasta 4,7 GHz</td>
+              </tr>
+              <tr>
+                <th scope="row">Gráfica</th>
+                <td>Integrada</td>
+                <td>Dedicada de 12 GB</td>
+                <td>Integrada</td>
+              </tr>
+              <tr>
+                <th scope="row">Pantalla</th>
+                <td>14″ 2.8K a 120 Hz</td>
+                <td>No incluida (hasta 4 monitores)</td>
+                <td>27″ 4K, 98 % DCI-P3</td>
+              </tr>
+              <tr>
+                <th scope="row">Memoria</th>
+                <td>16 o 32 GB</td>
+                <td>32 o 64 GB (hasta 128 GB)</td>
+                <td>16 o 32 GB</td>
+              </tr>
+              <tr>
+                <th scope="row">Almacenamiento</th>
+                <td>512 GB o 1 TB</td>
+                <td>1 o 2 TB</td>
+                <td>1 o 2 TB</td>
+              </tr>
+              <tr>
+                <th scope="row">Puertos destacados</th>
+                <td>Thunderbolt 4 y HDMI 2.1</td>
+                <td>3 × DisplayPort y HDMI 2.1</td>
+                <td>Thunderbolt 4 y lector SD</td>
+              </tr>
+              <tr>
+                <th scope="row">Peso</th>
+                <td>1,35 kg</td>
+                <td>9,8 kg</td>
+                <td>7,9 kg</td>
+              </tr>
+              <tr>
+                <th scope="row">Ideal para</th>
+                <td>Estudiar y trabajar en movimiento</td>
+                <td>Jugar, editar y crear</td>
+                <td>Diseñar y trabajar en casa</td>
+              </tr>
+              <tr>
+                <th scope="row">Precio desde</th>
+                <td class="compare-table__price">1.199 €</td>
+                <td class="compare-table__price">1.499 €</td>
+                <td class="compare-table__price">1.349 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Ayuda para elegir equipo">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-band__text">
+            <h2 class="cta-band__title">¿Necesitas ayuda para decidir?</h2>
+            <p class="cta-band__lead">Te asesoramos sin compromiso según el uso que le vayas a dar.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="contacto.html">Contactar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <span class="logo__name">ORBIT<span class="logo__accent">PC</span></span>
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="site-footer__links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="aura-14.html">AURA 14</a></li>
+          <li><a href="nexus-x.html">NEXUS X</a></li>
+          <li><a href="studio-27.html">STUDIO 27</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 ORBIT PC · Equipo conceptual · Práctica de Diseño de Interfaces</p>
+    </div>
+  </footer>
+</body>
+</html>

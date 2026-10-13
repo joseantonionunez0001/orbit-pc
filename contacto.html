@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · ORBIT PC</title>
+  <meta name="description" content="Contacta con ORBIT PC: dudas sobre equipos, compras, soporte técnico, garantía y devoluciones.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <span class="logo__name">ORBIT<span class="logo__accent">PC</span></span>
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="main-nav__link" href="tienda.html">Tienda</a></li>
+          <li><a class="main-nav__link" href="soporte.html">Soporte</a></li>
+          <li><a class="main-nav__link" href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="container page-intro">
+      <p class="eyebrow">Contacto</p>
+      <h1 class="page-intro__title">Hablemos</h1>
+      <p class="page-intro__lead">¿Tienes dudas sobre un equipo, quieres hacer un pedido o necesitas ayuda técnica? Rellena el formulario y te respondemos en menos de 24 horas.</p>
+    </header>
+
+    <div class="container contact">
+      <aside class="contact__aside" aria-label="Información de contacto">
+        <div class="contact-card">
+          <span class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <div>
+            <h2 class="contact-card__title">Horario de atención</h2>
+            <p class="contact-card__text">Lunes a viernes, de 9:00 a 19:00</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg>
+          </span>
+          <div>
+            <h2 class="contact-card__title">Respuesta rápida</h2>
+            <p class="contact-card__text">Contestamos todas las consultas en menos de 24 horas laborables.</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </span>
+          <div>
+            <h2 class="contact-card__title">Tienda online</h2>
+            <p class="contact-card__text">Envíos gratuitos a toda la península en 24/48 h.</p>
+          </div>
+        </div>
+      </aside>
+
+      <form class="contact-form" id="formulario" action="gracias.html" method="get" aria-labelledby="form-title">
+        <h2 class="sr-only" id="form-title">Formulario de contacto</h2>
+
+        <fieldset class="form-group">
+          <legend class="form-group__legend">1. Tus datos</legend>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-field__label" for="nombre">Nombre y apellidos <abbr title="obligatorio">*</abbr></label>
+              <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej. Laura Martín" required>
+            </div>
+            <div class="form-field">
+              <label class="form-field__label" for="email">Correo electrónico <abbr title="obligatorio">*</abbr></label>
+              <input class="form-control" type="email" id="email" name="email" autocomplete="email" placeholder="nombre@correo.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-field__label" for="telefono">Teléfono</label>
+              <input class="form-control" type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="600 000 000" pattern="[0-9 +]{9,15}" aria-describedby="telefono-hint">
+              <span class="form-field__hint" id="telefono-hint">Opcional. Solo te llamaremos si lo prefieres.</span>
+            </div>
+            <div class="form-field">
+              <label class="form-field__label" for="motivo">Motivo de la consulta <abbr title="obligatorio">*</abbr></label>
+              <select class="form-control" id="motivo" name="motivo" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="informacion">Información sobre un equipo</option>
+                <option value="compra">Quiero comprar un equipo</option>
+                <option value="soporte">Soporte técnico</option>
+                <option value="garantia">Garantía y devoluciones</option>
+                <option value="otro">Otro motivo</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="form-group__legend">2. Equipo de interés</legend>
+          <div class="choice-list">
+            <div class="choice">
+              <input class="choice__input" type="radio" id="equipo-aura" name="equipo" value="aura-14">
+              <label class="choice__label" for="equipo-aura">AURA 14</label>
+            </div>
+            <div class="choice">
+              <input class="choice__input" type="radio" id="equipo-nexus" name="equipo" value="nexus-x">
+              <label class="choice__label" for="equipo-nexus">NEXUS X</label>
+            </div>
+            <div class="choice">
+              <input class="choice__input" type="radio" id="equipo-studio" name="equipo" value="studio-27">
+              <label class="choice__label" for="equipo-studio">STUDIO 27</label>
+            </div>
+            <div class="choice">
+              <input class="choice__input" type="radio" id="equipo-ninguno" name="equipo" value="no-lo-se" checked>
+              <label class="choice__label" for="equipo-ninguno">Aún no lo sé</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="form-group__legend">3. Tu mensaje</legend>
+          <div class="form-field">
+            <label class="form-field__label" for="mensaje">¿En qué podemos ayudarte? <abbr title="obligatorio">*</abbr></label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="6" minlength="20" placeholder="Cuéntanos qué necesitas…" required aria-describedby="mensaje-hint"></textarea>
+            <span class="form-field__hint" id="mensaje-hint">Mínimo 20 caracteres.</span>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="privacidad" required>
+            <span>He leído y acepto la política de privacidad. <abbr title="obligatorio">*</abbr></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="novedades">
+            <span>Quiero recibir novedades y ofertas de ORBIT PC.</span>
+          </label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="btn btn--primary btn--lg" type="submit">Enviar mensaje</button>
+          <button class="btn btn--ghost btn--lg" type="reset">Borrar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <span class="logo__name">ORBIT<span class="logo__accent">PC</span></span>
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="site-footer__links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="aura-14.html">AURA 14</a></li>
+          <li><a href="nexus-x.html">NEXUS X</a></li>
+          <li><a href="studio-27.html">STUDIO 27</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 ORBIT PC · Equipo conceptual · Práctica de Diseño de Interfaces</p>
+    </div>
+  </footer>
+</body>
+</html>
