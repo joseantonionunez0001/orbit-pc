@@ -20,7 +20,11 @@
         <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
         <span class="logo__tagline">Tecnología para tu mundo</span>
       </a>
-      <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__barras" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
         <ul class="main-nav__list">
           <li><a class="main-nav__link" href="index.html" aria-current="page">Inicio</a></li>
           <li><a class="main-nav__link" href="tienda.html">Tienda</a></li>
@@ -57,6 +61,40 @@
             <span>Potencia en movimiento</span>
           </figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="video-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">En movimiento</p>
+          <h2 class="section__title" id="video-title">Conoce la colección</h2>
+          <p class="section__lead">Un repaso de 23 segundos a los tres equipos de ORBIT PC. Puedes verlo con el sonido ambiente de fondo.</p>
+        </header>
+
+        <div class="media-layout">
+          <figure class="video-card">
+            <video class="video-card__player" controls playsinline preload="metadata" width="1280" height="720" poster="media/orbit-presentacion-poster.webp">
+              <source src="media/orbit-presentacion.mp4" type="video/mp4">
+              <source src="media/orbit-presentacion.webm" type="video/webm">
+              <track kind="captions" src="media/orbit-presentacion.es.vtt" srclang="es" label="Español" default>
+              <p>Tu navegador no puede reproducir vídeo. <a href="media/orbit-presentacion.mp4">Descarga el vídeo</a>.</p>
+            </video>
+            <figcaption class="video-card__caption">Presentación de AURA 14, NEXUS X y STUDIO 27</figcaption>
+          </figure>
+
+          <aside class="audio-card" aria-labelledby="audio-title">
+            <p class="eyebrow">Ambiente</p>
+            <h3 class="audio-card__title" id="audio-title">Música para elegir con calma</h3>
+            <p class="audio-card__text">Una pista ambiental suave para mirar la tienda sin prisa. Se repite sola y no se reproduce hasta que le des al play.</p>
+            <audio class="audio-card__player" controls loop preload="none">
+              <source src="media/orbit-ambiente.m4a" type="audio/mp4">
+              <source src="media/orbit-ambiente.webm" type="audio/webm">
+              <p>Tu navegador no puede reproducir audio. <a href="media/orbit-ambiente.m4a">Descarga la pista</a>.</p>
+            </audio>
+            <p class="audio-card__note">Pista sintetizada para ORBIT PC · 32 s en bucle</p>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -245,6 +283,7 @@
     </div>
     <div class="container"><p class="site-footer__copy">Textos e ilustraciones originales de ORBIT PC por José Antonio Núñez Lloret: <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Los recursos de terceros conservan sus propias licencias.</p></div>
   </footer>
+  <script src="js/menu.js" defer></script>
 </body>
 </html>
 

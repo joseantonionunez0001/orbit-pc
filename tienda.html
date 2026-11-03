@@ -20,7 +20,11 @@
         <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
         <span class="logo__tagline">Tecnología para tu mundo</span>
       </a>
-      <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__barras" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
         <ul class="main-nav__list">
           <li><a class="main-nav__link" href="index.html">Inicio</a></li>
           <li><a class="main-nav__link" href="tienda.html" aria-current="page">Tienda</a></li>
@@ -37,9 +41,29 @@
       <p class="page-intro__lead">Tres opciones para necesidades diferentes. Selecciona un equipo y descubre sus detalles.</p>
     </header>
 
-    <section class="container" aria-label="Listado de productos">
+    <section class="container" aria-label="Filtros del listado">
+      <div class="toolbar">
+        <div class="toolbar__filtros" role="group" aria-label="Filtrar por tipo de equipo">
+          <button class="filtro is-active" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button class="filtro" type="button" data-filtro="portatil" aria-pressed="false">Portátiles</button>
+          <button class="filtro" type="button" data-filtro="sobremesa" aria-pressed="false">Sobremesa</button>
+          <button class="filtro" type="button" data-filtro="todo-en-uno" aria-pressed="false">Todo en uno</button>
+        </div>
+        <label class="toolbar__orden">
+          <span class="toolbar__orden-texto">Ordenar</span>
+          <select class="form-control toolbar__select" id="orden-productos">
+            <option value="destacados">Destacados</option>
+            <option value="precio-asc">Precio: de menor a mayor</option>
+            <option value="precio-desc">Precio: de mayor a menor</option>
+          </select>
+        </label>
+      </div>
+      <p class="toolbar__resultado" id="resultado-filtro" role="status" aria-live="polite">Mostrando 3 de 3 equipos</p>
+    </section>
+
+    <section class="container" id="listado" aria-label="Listado de productos">
       <div class="product-grid">
-        <article class="product-card">
+        <article class="product-card" data-categoria="portatil" data-precio="1199" data-orden="0">
           <div class="product-card__media">
             <img src="img/aura-14.svg" width="560" height="360" alt="">
           </div>
@@ -60,7 +84,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-categoria="sobremesa" data-precio="1499" data-orden="1">
           <div class="product-card__media">
             <img src="img/nexus-x.svg" width="320" height="360" alt="">
           </div>
@@ -81,7 +105,7 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-categoria="todo-en-uno" data-precio="1349" data-orden="2">
           <div class="product-card__media">
             <img src="img/studio-27.svg" width="560" height="380" alt="">
           </div>
@@ -223,6 +247,8 @@
     </div>
     <div class="container"><p class="site-footer__copy">Textos e ilustraciones originales de ORBIT PC por José Antonio Núñez Lloret: <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Los recursos de terceros conservan sus propias licencias.</p></div>
   </footer>
+  <script src="js/menu.js" defer></script>
+  <script src="js/tienda.js" defer></script>
 </body>
 </html>
 

@@ -20,7 +20,11 @@
         <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
         <span class="logo__tagline">Tecnología para tu mundo</span>
       </a>
-      <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__barras" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
         <ul class="main-nav__list">
           <li><a class="main-nav__link" href="index.html">Inicio</a></li>
           <li><a class="main-nav__link" href="tienda.html" aria-current="page">Tienda</a></li>
@@ -316,6 +320,7 @@
     </div>
     <div class="container"><p class="site-footer__copy">Textos e ilustraciones originales de ORBIT PC por José Antonio Núñez Lloret: <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Los recursos de terceros conservan sus propias licencias.</p></div>
   </footer>
+  <script src="js/menu.js" defer></script>
 </body>
 </html>
 

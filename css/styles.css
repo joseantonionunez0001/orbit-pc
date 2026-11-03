@@ -369,8 +369,8 @@ button {
 }
 
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: var(--space-md);
 }
 
@@ -1514,33 +1514,8 @@ textarea.form-control {
 
 @media (max-width: 680px) {
   :root {
-    --header-height: auto;
     --space-xl: 3rem;
     --space-lg: 1.75rem;
-  }
-
-  .site-header {
-    position: static;
-  }
-
-  .site-header__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding-block: 1rem 0.25rem;
-  }
-
-  .main-nav {
-    width: 100%;
-  }
-
-  .main-nav__list {
-    justify-content: space-between;
-    gap: var(--space-sm);
-  }
-
-  .main-nav__link {
-    font-size: 0.75rem;
   }
 
   .btn--lg {
@@ -1588,5 +1563,343 @@ textarea.form-control {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Práctica 6: multimedia */
+[hidden] {
+  display: none !important;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.media-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--space-md);
+}
+
+.video-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.video-card__player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-card__caption {
+  padding: 0.85rem 1.1rem;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.audio-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse 80% 70% at 0% 100%, rgba(116, 227, 199, 0.12), transparent 70%),
+    var(--color-surface);
+}
+
+.audio-card__title {
+  font-size: var(--fs-lg);
+  line-height: 1.25;
+}
+
+.audio-card__text {
+  color: var(--color-text-muted);
+}
+
+.audio-card__player {
+  width: 100%;
+  color-scheme: dark;
+}
+
+.audio-card__note {
+  font-size: var(--fs-xs);
+  color: var(--color-text-subtle);
+}
+
+/* Filtros de la tienda */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.toolbar__filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filtro {
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.filtro:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.filtro.is-active {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.toolbar__orden {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.toolbar__select {
+  width: auto;
+  min-width: 230px;
+}
+
+.toolbar__resultado {
+  margin-block: 0.9rem var(--space-md);
+  font-size: var(--fs-sm);
+  color: var(--color-text-subtle);
+}
+
+/* Botón del menú en móvil */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.nav-toggle:hover {
+  border-color: var(--color-accent);
+}
+
+.nav-toggle__barras,
+.nav-toggle__barras::before,
+.nav-toggle__barras::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-text);
+  transition: transform var(--transition), background-color var(--transition);
+}
+
+.nav-toggle__barras {
+  position: relative;
+}
+
+.nav-toggle__barras::before,
+.nav-toggle__barras::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle__barras::before {
+  top: -7px;
+}
+
+.nav-toggle__barras::after {
+  top: 7px;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__barras {
+  background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__barras::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__barras::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Práctica 6: diseño responsive */
+
+/* Pantallas muy grandes */
+@media (min-width: 1440px) {
+  :root {
+    --container: 1320px;
+  }
+}
+
+/* Portátiles y tablets en horizontal */
+@media (max-width: 1024px) {
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero__inner {
+    gap: var(--space-lg);
+  }
+
+  .cta-band {
+    padding: var(--space-md);
+  }
+}
+
+/* Tablets en vertical y móviles grandes */
+@media (max-width: 900px) {
+  .media-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .audio-card {
+    padding: var(--space-md) var(--space-md) 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-header__inner {
+    flex-wrap: wrap;
+    min-height: 76px;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav__link {
+    padding: 0.95rem 0;
+    border-top: 1px solid var(--color-border-soft);
+  }
+
+  .main-nav__link::after {
+    display: none;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__links {
+    gap: var(--space-xs) var(--space-md);
+  }
+
+  .toolbar__orden {
+    width: 100%;
+  }
+
+  .toolbar__select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cta-band {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 520px) {
+  .container {
+    width: min(100% - 2rem, var(--container));
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .logo__tagline {
+    display: none;
+  }
+
+  .hero__chip--side {
+    display: none;
+  }
+
+  .hero__chip--top {
+    left: 4px;
+  }
+
+  .toolbar__filtros {
+    flex-wrap: nowrap;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .filtro {
+    flex: 0 0 auto;
+  }
+
+  .product-card__footer {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .highlight {
+    flex-basis: 45%;
+    padding: var(--space-md) var(--space-sm);
+  }
+}
+
+/* En pantallas táctiles no tiene sentido levantar las tarjetas al pasar el ratón */
+@media (hover: none) {
+  .product-card:hover {
+    transform: none;
   }
 }
